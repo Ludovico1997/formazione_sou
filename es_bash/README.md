@@ -2,11 +2,10 @@
 
 ## Esercizi Regex 
 
-- **es_extended_regex.sh**
-- **es_ipv4_regex.sh**
+- [esercizi regex](es_extended_regex.sh)
+- [esercizio regex IPV4](es_ipv4_regex.sh)
 
 
 ## Esercizi random bash.
 
-- **esercizi_bash1.sh**
-
+- [esercizi bash](esercizi_bash_random.sh)
