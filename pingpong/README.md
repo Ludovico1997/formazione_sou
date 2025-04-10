@@ -9,6 +9,7 @@
 
 !!! warning
     **Attenzione:** Per funzionare deve essere installata la libreria esterna di Python "Paramiko"
+    **NB:** C'è bisogno di configurare correttamente le chiavi SSH e il percorso delle stesse nel file script.py
 
 ### Installazione
 

@@ -8,8 +8,8 @@ IP2 = "192.168.33.21"
 IP_LOOPBACK = "127.0.0.1"
 NODE1_PORT = 2222
 NODE2_PORT = 2200
-private_key_path1 = "/Users/ludovicoparis/pingpong/.vagrant/machines/node1/virtualbox/private_key"
-private_key_path2 = "/Users/ludovicoparis/pingpong/.vagrant/machines/node2/virtualbox/private_key"
+private_key_path1 = "/Users/ludovicoparis/formazione_sou/pingpong/.vagrant/machines/node1/virtualbox/private_key"
+private_key_path2 = "/Users/ludovicoparis/formazione_sou/pingpong/.vagrant/machines/node2/virtualbox/private_key"
 USERNAME = "vagrant"
 PASSWORD = "vagrant"
 art = r"""
@@ -84,7 +84,7 @@ while True:
     print("sto eseguendo il ping pong")
     print(art)
     up_down()
-    for _ in range(60):
+    for _ in range(10):
         print(".", end="", flush=True)
         time.sleep(1)
     print()
