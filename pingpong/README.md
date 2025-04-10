@@ -8,8 +8,8 @@
 ### Questo Up and Down viene eseguito ogni 60 secondi, il processo non andra in background ma occuperà la tua shell stampando puntini fino al nuovo switch.
 
 !!! warning
-    **Attenzione:** Per funzionare deve essere installata la libreria esterna di Python "Paramiko"
-    **NB:** C'è bisogno di configurare correttamente le chiavi SSH e il percorso delle stesse nel file script.py
+**Attenzione:** Per funzionare deve essere installata la libreria esterna di Python "Paramiko"
+**NB:** C'è bisogno di configurare correttamente le chiavi SSH e il percorso delle stesse nel file script.py
 
 ### Installazione
 
