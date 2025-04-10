@@ -52,5 +52,4 @@ fi
 30 6 * * 1 /usr/bin/find /var/log -type f -mtime +30 -exec /bin/rm {} \;
 #----------------------------
 awk -F, '$0 ~ /banana/ { print $3 }' file.csv
-
 ```

@@ -1,0 +1,30 @@
+- name: Installare Docker su Ubuntu
+  hosts: all
+  become: true
+
+  tasks:
+
+    - name: Aggiornare la lista dei pacchetti
+      apt:
+        update_cache: yes
+
+    - name: Installare Docker
+      package:
+        name: docker.io
+        state: present
+        update_cache: yes
+
+    - name: Abilitare Docker all'avvio
+      systemd:
+        name: docker
+        enabled: yes
+        state: started
+
+    - name: Verifica che Docker sia in esecuzione
+      command: docker --version
+      register: docker_version
+      changed_when: false
+
+    - name: Mostra la versione di Docker
+      debug:
+        var: docker_version.stdout
