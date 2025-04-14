@@ -1,7 +1,8 @@
 import paramiko
 import subprocess
 import time
-
+import os
+ 
 #Definisco le costanti fondamentali.
 IP1 = "192.168.33.20"
 IP2 = "192.168.33.21"
@@ -10,11 +11,16 @@ NODE1_PORT = 2222
 NODE2_PORT = 2200
 private_key_path1 = "/Users/ludovicoparis/formazione_sou/pingpong/.vagrant/machines/node1/virtualbox/private_key"
 private_key_path2 = "/Users/ludovicoparis/formazione_sou/pingpong/.vagrant/machines/node2/virtualbox/private_key"
-USERNAME = "vagrant"
-PASSWORD = "vagrant"
+
 art = r"""
 🏓    o    🏓
 """
+# ssh_password = os.getenv('MY_SSH_PASSWORD_PINGPONG')
+# if ssh_password is None:
+#     raise ValueError("La variabile d'ambiente MY_SSH_PASSWORD non è definita!")
+ssh_username = os.getenv('MY_SSH_USERNAME_PINGPONG')
+if ssh_username is None:
+    raise ValueError("La variabile d'ambiente MY_SSH_USERNAME_ non è definita!")
 
 
 
@@ -23,7 +29,7 @@ client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
 
 # funzione per la connessione ssh deve essere passata chiave e porta ssh.
 def connessione_ssh(porta_ssh, chiave):
-    client.connect(hostname=IP_LOOPBACK, username=USERNAME, key_filename=chiave, port=porta_ssh)
+    client.connect(hostname=IP_LOOPBACK, username=ssh_username, key_filename=chiave, port=porta_ssh)
     # print("Connessione riuscita!")
 
 #Crea un Docker ealen/echo-server chiamato my_pingpong.

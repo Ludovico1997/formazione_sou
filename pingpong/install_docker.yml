@@ -28,3 +28,4 @@
     - name: Mostra la versione di Docker
       debug:
         var: docker_version.stdout
+    
